@@ -122,15 +122,32 @@
 # end
 
 
-def solve(arr)
-    len = arr.length
-    # puts len
-    new_arr = [arr[0]]
-    for i in 1..len
-        arr[i] += arr[i-1]
-        new_arr.append[arr[i]]
-        return new_arr
-    end
-end
-arr = [8,3,2,5,4,1]
-puts solve(arr)
+# def solve(arr)
+#     len = arr.length
+#     # puts len
+#     new_arr = [arr[0]]
+#     for i in 1..len
+#         arr[i] += arr[i-1]
+#         new_arr.append[arr[i]]
+#         return new_arr
+#     end
+# end
+# arr = [8,3,2,5,4,1]
+# # puts solve(arr)
+# len = arr.length
+# puts len
+# new_arr = [arr[0]]
+# for i in 1..len
+#     if arr[i]
+#       arr[i] += arr[i-1]
+#       new_arr.append(arr[i])
+  
+#     #   puts new_arr[i]
+#     end
+# end
+# puts new_arr
+
+file = File.open("employees.txt","a")
+file.write("\nHamza, Accountant")
+file.close()
+file.write("\nAli2, IT Depart")
