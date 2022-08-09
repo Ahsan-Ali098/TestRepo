@@ -98,16 +98,39 @@
 #   end
 #   puts l.call("try") # Feel free to experiment with this
 
-arr = [3,2,3,4,5,6,5,4,4,3,32]
-arr
-len = arr.length
+# Number frequencey in array#
+# arr = [3,2,3,4,5,6,5,4]
+# visited = []
+# puts len = arr.length
+# for i in 0..len
+#     visited[i] =false
+# end
+# puts "#{visited[4]}"
 
-for i in 0..len
-    count = 1
-    for j in i+1..len
-        if arr[i] == arr[j]
-            count +=1
-        end
+# for i in 0..len
+#     if visited[i] = true
+#         next
+#     end
+#     count = 1
+#     for j in 1..len
+#         if arr[i] == arr[j]
+#             visited[j] = true
+#             count += 1
+#         end
+#     end
+#     puts "THe number #{arr[i]} is #{count} times"
+# end
+
+
+def solve(arr)
+    len = arr.length
+    # puts len
+    new_arr = [arr[0]]
+    for i in 1..len
+        arr[i] += arr[i-1]
+        new_arr.append[arr[i]]
+        return new_arr
     end
-    puts "THe number #{arr[i]} is #{count} times"
 end
+arr = [8,3,2,5,4,1]
+puts solve(arr)
